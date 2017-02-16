@@ -1,0 +1,8 @@
+{
+  "name": "elm-community-linear-algebra-tests",
+  "version": "1.1.0",
+  "dependencies": {
+    "elm": "^0.18.0",
+    "elm-test": "^0.18.2"
+  }
+}

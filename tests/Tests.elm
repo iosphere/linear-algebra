@@ -1,11 +1,21 @@
-module Tests exposing (suite)
+port module Tests exposing (suite)
 
 import Test exposing (Test, describe, test, fuzz, fuzz3)
+import Test.Runner.Node exposing (run, TestProgram)
 import Fuzz
 import Expect
 import Math.Vector2 as V2
 import Math.Vector3 as V3
 import Math.Matrix4 as M4
+import Json.Encode exposing (Value)
+
+
+main : TestProgram
+main =
+    run emit suite
+
+
+port emit : ( String, Value ) -> Cmd msg
 
 
 suite : Test
